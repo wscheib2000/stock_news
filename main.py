@@ -37,7 +37,7 @@ yesterday_close = get_close(stock_data, 1)
 two_days_ago_close = get_close(stock_data, 2)
 pct_diff = 100*(yesterday_close-two_days_ago_close)/two_days_ago_close
 
-if abs(pct_diff) >= 0.05:
+if abs(pct_diff) >= 5:
     response = requests.get(news_stem, params=news_params)
     response.raise_for_status()
     top_3 = response.json()['articles'][:3]
