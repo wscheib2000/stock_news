@@ -25,7 +25,7 @@ alpha_params = {
 }
 news_stem = 'https://newsapi.org/v2/everything'
 news_params = {
-    'q': COMPANY_NAME,
+    'qInTitle': COMPANY_NAME,
     'apiKey': NEWSAPI_KEY
 }
 
