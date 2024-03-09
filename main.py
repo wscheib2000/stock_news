@@ -35,7 +35,7 @@ stock_data = response.json()
 
 yesterday_close = get_close(stock_data, 1)
 two_days_ago_close = get_close(stock_data, 2)
-pct_diff = 100*(yesterday_close-two_days_ago_close)/two_days_ago_close
+pct_diff = 100*(yesterday_close-two_days_ago_close)/yesterday_close
 
 if abs(pct_diff) >= 5:
     response = requests.get(news_stem, params=news_params)
